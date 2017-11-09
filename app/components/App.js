@@ -1,9 +1,13 @@
-const React = require('react');
+import React from 'react';
+import TulipBuilder from './TulipBuilder';
 
-class App extends React.Component {
+export default class App extends React.Component {
     render() {
         return (
-            <p>Take a Tulip</p>
+            <div className="container">
+                <h1>Take a Tulip</h1>
+                <TulipBuilder />
+            </div>
         )
     }
 }

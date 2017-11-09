@@ -1,0 +1,23 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,h4 {
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto 0 auto;
+}
+
+.tulip-container {
+    width: 200px;
+    height: 400px;
+}
+
+.builder-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
