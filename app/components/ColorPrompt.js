@@ -7,6 +7,8 @@ export default class ColorPrompt extends React.Component {
             <div>
                 <h4>Choose a color for the bulb</h4>
                 <TwitterPicker triangle="hide" />
+                <br/>
+                <button className="button center">Next</button>
             </div>
         )
     }
