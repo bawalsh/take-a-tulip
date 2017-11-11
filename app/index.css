@@ -45,3 +45,7 @@ h1,h4 {
     margin-left: auto;
     margin-right: auto;
 }
+
+.prompt-container {
+    position: relative;
+}
