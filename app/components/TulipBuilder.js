@@ -17,37 +17,65 @@ export default class TulipBuilder extends React.Component {
         super(props);
 
         this.state = {
-            builderState: BuilderStates.BULB_COLOR
+            builderState: BuilderStates.BULB_COLOR,
+            tulipColors: {
+                bulb: "rgb(255,85,85)",
+                stem: "rgb(0,152,0)",
+                pot: "rgb(255,170,86)"
+            }
         };
 
         this.handleNext = this.handleNext.bind(this);
+        this.handleColorChange = this.handleColorChange.bind(this);
     }
 
     handleNext() {
         this.setState(function (prevState) {
             return {
-                builderState: prevState.builderState + 1
+                builderState: prevState.builderState + 1,
+                tulipColors: {
+                    bulb: prevState.tulipColors.bulb,
+                    stem: prevState.tulipColors.stem,
+                    pot: prevState.tulipColors.pot
+                }
             }
+        });
+    }
+
+    handleColorChange(part, color) {
+        this.setState(function (prevState) {
+            let newState =  {
+                builderState: prevState.builderState,
+                tulipColors: {
+                    bulb: prevState.tulipColors.bulb,
+                    stem: prevState.tulipColors.stem,
+                    pot: prevState.tulipColors.pot
+                }
+            };
+
+            newState.tulipColors[part] = "rgb("+color.rgb.r+","+color.rgb.g+","+color.rgb.b+")";
+
+            return newState;
         });
     }
 
     render() {
         return (
             <div className="builder-container">
-                <TulipVisualizer visualizerState={this.state.builderState} />
+                <TulipVisualizer visualizerState={this.state.builderState} bulbColor={this.state.tulipColors.bulb} stemColor={this.state.tulipColors.stem} potColor={this.state.tulipColors.pot} />
                 {this.state.builderState === BuilderStates.BULB_COLOR ?
-                    <Prompt text="Choose a color for the bulb" handleNext={this.handleNext}>
-                        <TwitterPicker triangle="hide"/>
+                    <Prompt text="Choose a color for the bulb" handleNext={this.handleNext} >
+                        <TwitterPicker triangle="hide" onChangeComplete={(color) => this.handleColorChange("bulb", color)} />
                     </Prompt> : null
                 }
                 {this.state.builderState === BuilderStates.STEM_COLOR ?
-                    <Prompt text="Choose a color for the stem" handleNext={this.handleNext}>
-                        <TwitterPicker triangle="hide"/>
+                    <Prompt text="Choose a color for the stem" handleNext={this.handleNext} >
+                        <TwitterPicker triangle="hide" onChangeComplete={(color) => this.handleColorChange("stem", color)} />
                     </Prompt> : null
                 }
                 {this.state.builderState === BuilderStates.POT_COLOR ?
-                    <Prompt text="Choose a color for the pot" handleNext={this.handleNext}>
-                        <TwitterPicker triangle="hide"/>
+                    <Prompt text="Choose a color for the pot" handleNext={this.handleNext} >
+                        <TwitterPicker triangle="hide" onChangeComplete={(color) => this.handleColorChange("pot", color)} />
                     </Prompt> : null
                 }
                 {this.state.builderState === BuilderStates.SHARE ?
