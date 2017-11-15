@@ -28,7 +28,7 @@ export default class TulipBuilder extends React.Component {
         super(props);
 
         this.state = {
-            builderState: BuilderStates.BULB_COLOR,
+            builderState: BuilderStates.READY,
             tulipColors: {
                 bulb: "rgb(255,85,85)",
                 stem: "rgb(0,152,0)",
@@ -77,8 +77,8 @@ export default class TulipBuilder extends React.Component {
         return (
             <div className="flex-container">
                 <TulipVisualizer visualizerState={this.state.builderState} bulbColor={this.state.tulipColors.bulb} stemColor={this.state.tulipColors.stem} potColor={this.state.tulipColors.pot} />
-                {this.state.builderState === BuilderStates.BULB_COLOR ?
-                    <Prompt text="Choose a color for the bulb" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} >
+                {this.state.builderState === BuilderStates.READY || this.state.builderState === BuilderStates.BULB_COLOR ?
+                    <Prompt text="Choose a color for the bulb" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} isStationary={this.state.builderState === BuilderStates.READY} >
                         <TwitterPicker triangle="hide" color={this.state.tulipColors.bulb} onChangeComplete={(color) => this.handleColorChange("bulb", color)} />
                     </Prompt> : null
                 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 import PropTypes from 'prop-types';
-import SunImage from '../images/sun.svg';
 
 const defaultStyle = {
     bulb: {y: 0},
@@ -133,7 +132,49 @@ export default class TulipVisualizer extends React.Component {
                             style={this.state.visualizerStyle.sun}>
                             {interpolatingStyle =>
                                 <g transform={ interpolatingStyle.x !== 0 || interpolatingStyle.y !== 0 ? `translate(${interpolatingStyle.x ? interpolatingStyle.x : -200} ${interpolatingStyle.y ? interpolatingStyle.y : -200})` : ""}>
-                                    <SunImage />
+                                    <svg xmlns="http://www.w3.org/2000/svg" style={{isolation: "isolate"}}
+                                         viewBox="0 0 200 200" width="200" height="200">
+                                        <defs>
+                                            <clipPath id="_clipPath_M8WeGDOiI0KurXJ1xrrCZNqhcRxk22Wc">
+                                                <rect width="200" height="200"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clipPath="url(#_clipPath_M8WeGDOiI0KurXJ1xrrCZNqhcRxk22Wc)">
+                                            <clipPath id="_clipPath_8MaRr4dF2kkHM0lvyRJkbrTC3lUPFi67">
+                                                <rect x="0" y="0" width="200" height="200" transform="matrix(1,0,0,1,0,0)" fill="rgb(255,255,255)"/>
+                                            </clipPath>
+                                            <g clipPath="url(#_clipPath_8MaRr4dF2kkHM0lvyRJkbrTC3lUPFi67)">
+                                                <g id="Group">
+                                                    <path d=" M 51.875 100 C 51.875 73.439 73.439 51.875 100 51.875 C 126.561 51.875 148.125 73.439 148.125 100 C 148.125 126.561 126.561 148.125 100 148.125 C 73.439 148.125 51.875 126.561 51.875 100 Z "
+                                                          fill="rgb(255,191,0)"/>
+                                                    <line x1="148.125" y1="51.875" x2="167.125" y2="32.875" vectorEffect="non-scaling-stroke"
+                                                          strokeWidth="5" stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter"
+                                                          strokeLinecap="square" strokeMiterlimit="3"/>
+                                                    <line x1="148.125" y1="148.125" x2="167.125" y2="167.125" vectorEffect="non-scaling-stroke"
+                                                          strokeWidth="5" stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter"
+                                                          strokeLinecap="square" strokeMiterlimit="3"/>
+                                                    <line x1="100" y1="167.125" x2="100" y2="193.995" vectorEffect="non-scaling-stroke" strokeWidth="5"
+                                                          stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter" strokeLinecap="square"
+                                                          strokeMiterlimit="3"/>
+                                                    <line x1="100" y1="5" x2="100" y2="31.87" vectorEffect="non-scaling-stroke" strokeWidth="5"
+                                                          stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter" strokeLinecap="square"
+                                                          strokeMiterlimit="3"/>
+                                                    <line x1="167.627" y1="99.498" x2="194.498" y2="99.498" vectorEffect="non-scaling-stroke"
+                                                          strokeWidth="5" stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter"
+                                                          strokeLinecap="square" strokeMiterlimit="3"/>
+                                                    <line x1="5.502" y1="99.498" x2="32.373" y2="99.498" vectorEffect="non-scaling-stroke" strokeWidth="5"
+                                                          stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter" strokeLinecap="square"
+                                                          strokeMiterlimit="3"/>
+                                                    <line x1="32.875" y1="32.875" x2="51.875" y2="51.875" vectorEffect="non-scaling-stroke"
+                                                          strokeWidth="5" stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter"
+                                                          strokeLinecap="square" strokeMiterlimit="3"/>
+                                                    <line x1="32.875" y1="167.125" x2="51.875" y2="148.125" vectorEffect="non-scaling-stroke"
+                                                          strokeWidth="5" stroke="rgb(255,191,0)" strokeOpacity="100" strokeLinejoin="miter"
+                                                          strokeLinecap="square" strokeMiterlimit="3"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
                                 </g>
                                 }
                         </Motion>

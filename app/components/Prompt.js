@@ -7,6 +7,10 @@ const defaultStyles = {
         opacity: 0,
         left: -200
     },
+    center: {
+        opacity: 1,
+        left: 0
+    },
     right: {
         opacity: 0,
         left: 200
@@ -20,12 +24,12 @@ const transitionStyles = {
     },
     leave: {
         left: {
-            opacity: spring(0, {damping: 20, precision: 0.1}),
-            left: spring(-200, {damping: 20, precision: 0.1})
+            opacity: spring(0, {stiffness:158, damping: 25, precision: 0.1}),
+            left: spring(-200, {stiffness:158, damping: 25, precision: 0.1})
         },
         right: {
-            opacity: spring(0, {damping: 20, precision: 0.1}),
-            left: spring(200, {damping: 20, precision: 0.1})
+            opacity: spring(0, {stiffness:158, damping: 25, precision: 0.1}),
+            left: spring(200, {stiffness:158, damping: 25, precision: 0.1})
         }
     }
 };
@@ -61,7 +65,7 @@ export default class Prompt extends React.Component {
     render() {
         return (
             <Motion
-                defaultStyle={defaultStyles[this.props.from]}
+                defaultStyle={this.props.isStationary ? defaultStyles.center : defaultStyles[this.props.from]}
                 style={this.state}
                 onRest={this.checkState}>
                     {interpolatingStyle =>
@@ -70,8 +74,8 @@ export default class Prompt extends React.Component {
                             {this.props.children}
                             <br/>
                             <div className="flex-container">
-                                {this.props.hasBack ? <button className="button center muted" onClick={this.handleInternalNavigationBack}>Back</button> : null}
-                                <button className="button center" onClick={this.handleInternalNavigationNext}>{this.props.nextText}</button>
+                                {this.props.hasBack ? <button className="button center muted" onClick={this.handleInternalNavigationBack}><i className="fa fa-arrow-left" /> Back</button> : null}
+                                <button className="button center" onClick={this.handleInternalNavigationNext}>{this.props.nextText} {this.props.nextText === Prompt.defaultProps.nextText ? <i className="fa fa-arrow-right" /> : <i className="fa fa-undo" /> }</button>
                             </div>
                         </div>}
             </Motion>
@@ -81,7 +85,8 @@ export default class Prompt extends React.Component {
 
 Prompt.defaultProps = {
     hasBack: true,
-    nextText: "Next"
+    nextText: "Next",
+    isStationary: false
 };
 
 Prompt.propTypes = {
@@ -89,5 +94,6 @@ Prompt.propTypes = {
     handleNavigation: PropTypes.func.isRequired,
     from: PropTypes.string.isRequired,
     hasBack: PropTypes.bool,
-    nextText: PropTypes.string
+    nextText: PropTypes.string,
+    isStationary: PropTypes.bool
 };
