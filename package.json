@@ -4,7 +4,7 @@
   "description": "Learn more about tulip mania, and create your own tulip",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --host 0.0.0.0",
     "build": "NODE_ENV='production' webpack -p",
     "deploy": "npm run build && firebase deploy",
     "firebase-init": "firebase login && firebase init"
@@ -20,6 +20,7 @@
   "dependencies": {
     "file-loader": "^1.1.5",
     "font-awesome": "^4.7.0",
+    "query-string": "^5.0.1",
     "react": "^16.0.0",
     "react-color": "^2.13.8",
     "react-dom": "^16.0.0",

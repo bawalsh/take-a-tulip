@@ -44,7 +44,7 @@ const shareStyle = {
     sun: {x: spring(0, {damping: 40, precision: 0.1}), y: spring(0, {damping: 40, precision: 0.1})}
 };
 
-export default class TulipVisualizer extends React.Component {
+class TulipVisualizer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -52,7 +52,7 @@ export default class TulipVisualizer extends React.Component {
         switch(this.props.visualizerState) {
             case 0:
                 this.state = {
-                    visualizerStyle: defaultStyle
+                    visualizerStyle: shareStyle
                 };
                 break;
             case 1:
@@ -317,3 +317,5 @@ TulipVisualizer.propTypes = {
     stemColor: PropTypes.string,
     potColor: PropTypes.string
 };
+
+export default TulipVisualizer;

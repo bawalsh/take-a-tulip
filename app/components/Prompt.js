@@ -34,7 +34,7 @@ const transitionStyles = {
     }
 };
 
-export default class Prompt extends React.Component {
+class Prompt extends React.Component {
 
     constructor(props) {
         super(props);
@@ -75,7 +75,7 @@ export default class Prompt extends React.Component {
                             <br/>
                             <div className="flex-container">
                                 {this.props.hasBack ? <button className="button center muted" onClick={this.handleInternalNavigationBack}><i className="fa fa-arrow-left" /> Back</button> : null}
-                                <button className="button center" onClick={this.handleInternalNavigationNext}>{this.props.nextText} {this.props.nextText === Prompt.defaultProps.nextText ? <i className="fa fa-arrow-right" /> : <i className="fa fa-undo" /> }</button>
+                                <button className="button center" onClick={this.handleInternalNavigationNext}>{this.props.nextText} {this.props.nextText === Prompt.defaultProps.nextText || this.props.nextText === "Start creating tulip " ? <i className="fa fa-arrow-right" /> : <i className="fa fa-undo" /> }</button>
                             </div>
                         </div>}
             </Motion>
@@ -97,3 +97,5 @@ Prompt.propTypes = {
     nextText: PropTypes.string,
     isStationary: PropTypes.bool
 };
+
+export default Prompt;

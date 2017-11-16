@@ -1,13 +1,24 @@
 import React from 'react';
 import TulipBuilder from './TulipBuilder';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-export default class App extends React.Component {
+class App extends React.Component {
     render() {
         return (
-            <div className="container center">
-                <h1 className="logo">Take a Tulip</h1>
-                <TulipBuilder />
-            </div>
+            <BrowserRouter>
+                <Switch>
+                    <Route path='/' render={function() {
+                        return (
+                            <div className="container center">
+                                <h1 className="logo">Take a Tulip</h1>
+                                <TulipBuilder />
+                            </div>
+                        )
+                    }} />
+                </Switch>
+            </BrowserRouter>
         )
     }
 }
+
+export default App;
