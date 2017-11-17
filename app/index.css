@@ -2,6 +2,10 @@
     font-family: 'Arvo', serif;
 }
 
+body {
+    margin: 0;
+}
+
 h1,h4 {
     text-align: center;
 }
@@ -9,6 +13,8 @@ h1,h4 {
 .logo {
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .container {
@@ -80,4 +86,42 @@ h1,h4 {
 
 .muted {
     color: #999999;
+}
+
+.heading {
+    font-family: 'Annie Use Your Telescope', cursive;
+    margin-top: 0;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.footer {
+    color: #999999;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.padded {
+    padding: 15px 15px 30px 15px;
+}
+
+.link-box {
+    outline: none;
+    resize: none;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.muted-link a:link, a:visited {
+    color: #999999;
+}
+
+.muted-link:hover {
+    color: #333333;
 }

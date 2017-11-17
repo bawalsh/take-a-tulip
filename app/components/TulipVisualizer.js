@@ -6,7 +6,7 @@ const defaultStyle = {
     bulb: {y: 0},
     stem: {y: 0},
     pot: {y: 0},
-    scale: {s: 1.0},
+    scale: {s: 0.85},
     sun: {x: -200, y: -200}
 };
 
@@ -14,7 +14,7 @@ const bulbStyle = {
     bulb: {y: spring(350, {damping: 40, precision: 0.1})},
     stem: {y: spring(1000, {damping: 80, precision: 0.1})},
     pot: {y: spring(1000, {damping: 80, precision: 0.1})},
-    scale: {s: spring(1.0, {damping: 40, precision: 0.01})},
+    scale: {s: spring(0.85, {damping: 40, precision: 0.01})},
     sun: {x: spring(-200, {damping: 40, precision: 0.1}), y: spring(-200, {damping: 40, precision: 0.1})}
 
 };
@@ -23,7 +23,7 @@ const stemStyle = {
     bulb: {y: spring(200, {damping: 40, precision: 0.1})},
     stem: {y: spring(200, {damping: 40, precision: 0.1})},
     pot: {y: spring(1000, {damping: 80, precision: 0.1})},
-    scale: {s: spring(1.0, {damping: 40, precision: 0.01})},
+    scale: {s: spring(0.85, {damping: 40, precision: 0.01})},
     sun: {x: spring(-200, {damping: 40, precision: 0.1}), y: spring(-200, {damping: 40, precision: 0.1})}
 
 };
@@ -32,7 +32,7 @@ const potStyle = {
     bulb: {y: spring(0, {damping: 40, precision: 0.1})},
     stem: {y: spring(0, {damping: 40, precision: 0.1})},
     pot: {y: spring(0, {damping: 40, precision: 0.1})},
-    scale: {s: spring(1.0, {damping: 40, precision: 0.01})},
+    scale: {s: spring(0.85, {damping: 40, precision: 0.01})},
     sun: {x: spring(-200, {damping: 40, precision: 0.1}), y: spring(-200, {damping: 40, precision: 0.1})}
 };
 
@@ -52,7 +52,7 @@ class TulipVisualizer extends React.Component {
         switch(this.props.visualizerState) {
             case 0:
                 this.state = {
-                    visualizerStyle: shareStyle
+                    visualizerStyle: defaultStyle
                 };
                 break;
             case 1:
@@ -126,7 +126,7 @@ class TulipVisualizer extends React.Component {
                 style={this.state.visualizerStyle.scale}>
                 {scalingStyle =>
                     <svg className="tulip-container" xmlns="http://www.w3.org/2000/svg" style={{isolation: "isolate"}}
-                         viewBox="0 0 492.957 985.334" width="492.957" height="985.334">
+                         viewBox={`0 0 492.957 ${(scalingStyle.s*985.334)+(985.334-(scalingStyle.s*985.334))/2}`} width="492.957" height="985.334">
                         <Motion
                             defaultStyle={defaultStyle.sun}
                             style={this.state.visualizerStyle.sun}>

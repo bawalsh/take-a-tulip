@@ -1,0 +1,110 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
+     viewBox="0 0 200 200" width="200" height="200">
+    <defs>
+        <clipPath id="_clipPath_H1AQnFbXlTv2T33sMpVYFdNYakyKYEyP">
+            <rect width="200" height="200"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#_clipPath_H1AQnFbXlTv2T33sMpVYFdNYakyKYEyP)">
+        <clipPath id="_clipPath_PEVdKdvN761iSt2SDbJOqE2JThOr3CoZ">
+            <rect x="0.5" y="0" width="200" height="200" transform="matrix(1,0,0,1,0,0)" fill="rgb(255,255,255)"/>
+        </clipPath>
+        <g clip-path="url(#_clipPath_PEVdKdvN761iSt2SDbJOqE2JThOr3CoZ)">
+            <g id="Group">
+                <g id="Group">
+                    <g id="Group">
+                        <g id="Group">
+                            <g id="Group">
+                                <g id="Group">
+                                    <g id="Group">
+                                        <path d=" M 0.5 100 C 0.5 44.808 45.308 0 100.5 0 C 155.692 0 200.5 44.808 200.5 100 C 200.5 155.192 155.692 200 100.5 200 C 45.308 200 0.5 155.192 0.5 100 Z "
+                                              fill="rgb(247,141,167)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <path d=" M 87.593 140.119 L 118.117 140.119 C 118.793 140.119 119.342 141.279 119.342 142.706 L 119.342 150.798 C 119.342 152.225 118.793 153.385 118.117 153.385 L 87.593 153.385 C 86.918 153.385 86.369 152.225 86.369 150.798 L 86.369 142.706 C 86.369 141.279 86.918 140.119 87.593 140.119 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 87.593 126.855 L 118.117 126.855 C 118.793 126.855 119.342 128.013 119.342 129.44 L 119.342 137.532 C 119.342 138.96 118.793 140.119 118.117 140.119 L 87.593 140.119 C 86.918 140.119 86.369 138.96 86.369 137.532 L 86.369 129.44 C 86.369 128.013 86.918 126.855 87.593 126.855 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 89.164 113.589 L 119.687 113.589 C 120.363 113.589 120.912 114.749 120.912 116.177 L 120.912 124.268 C 120.912 125.696 120.363 126.855 119.687 126.855 L 89.164 126.855 C 88.488 126.855 87.939 125.696 87.939 124.268 L 87.939 116.177 C 87.939 114.749 88.488 113.589 89.164 113.589 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 89.164 100.323 L 119.687 100.323 C 120.363 100.323 120.912 101.483 120.912 102.911 L 120.912 111.002 C 120.912 112.43 120.363 113.589 119.687 113.589 L 89.164 113.589 C 88.488 113.589 87.939 112.43 87.939 111.002 L 87.939 102.911 C 87.939 101.483 88.488 100.323 89.164 100.323 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 87.593 140.119 L 118.117 140.119 C 118.793 140.119 119.342 141.279 119.342 142.706 L 119.342 150.798 C 119.342 152.225 118.793 153.385 118.117 153.385 L 87.593 153.385 C 86.918 153.385 86.369 152.225 86.369 150.798 L 86.369 142.706 C 86.369 141.279 86.918 140.119 87.593 140.119 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 87.593 126.855 L 118.117 126.855 C 118.793 126.855 119.342 128.013 119.342 129.44 L 119.342 137.532 C 119.342 138.96 118.793 140.119 118.117 140.119 L 87.593 140.119 C 86.918 140.119 86.369 138.96 86.369 137.532 L 86.369 129.44 C 86.369 128.013 86.918 126.855 87.593 126.855 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 89.164 113.589 L 119.687 113.589 C 120.363 113.589 120.912 114.749 120.912 116.177 L 120.912 124.268 C 120.912 125.696 120.363 126.855 119.687 126.855 L 89.164 126.855 C 88.488 126.855 87.939 125.696 87.939 124.268 L 87.939 116.177 C 87.939 114.749 88.488 113.589 89.164 113.589 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 89.164 100.323 L 119.687 100.323 C 120.363 100.323 120.912 101.483 120.912 102.911 L 120.912 111.002 C 120.912 112.43 120.363 113.589 119.687 113.589 L 89.164 113.589 C 88.488 113.589 87.939 112.43 87.939 111.002 L 87.939 102.911 C 87.939 101.483 88.488 100.323 89.164 100.323 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 87.593 87.06 L 118.117 87.06 C 118.793 87.06 119.342 88.219 119.342 89.647 L 119.342 97.738 C 119.342 99.166 118.793 100.323 118.117 100.323 L 87.593 100.323 C 86.918 100.323 86.369 99.166 86.369 97.738 L 86.369 89.647 C 86.369 88.219 86.918 87.06 87.593 87.06 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 86.023 73.794 L 116.547 73.794 C 117.223 73.794 117.771 74.953 117.771 76.381 L 117.771 84.472 C 117.771 85.9 117.223 87.06 116.547 87.06 L 86.023 87.06 C 85.347 87.06 84.799 85.9 84.799 84.472 L 84.799 76.381 C 84.799 74.953 85.347 73.794 86.023 73.794 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 128.417 153.385 L 158.94 153.385 C 159.616 153.385 160.165 152.225 160.165 150.798 L 160.165 142.706 C 160.165 141.279 159.616 140.119 158.94 140.119 L 128.417 140.119 C 127.741 140.119 127.192 141.279 127.192 142.706 L 127.192 150.798 C 127.192 152.225 127.741 153.385 128.417 153.385 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 126.847 140.119 L 157.37 140.119 C 158.046 140.119 158.595 138.96 158.595 137.532 L 158.595 129.44 C 158.595 128.013 158.046 126.855 157.37 126.855 L 126.847 126.855 C 126.171 126.855 125.622 128.013 125.622 129.44 L 125.622 137.532 C 125.622 138.96 126.171 140.119 126.847 140.119 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 129.987 126.855 L 160.511 126.855 C 161.187 126.855 161.735 125.696 161.735 124.268 L 161.735 116.177 C 161.735 114.749 161.187 113.589 160.511 113.589 L 129.987 113.589 C 129.311 113.589 128.762 114.749 128.762 116.177 L 128.762 124.268 C 128.762 125.696 129.311 126.855 129.987 126.855 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 87.593 60.53 L 118.117 60.53 C 118.793 60.53 119.342 61.689 119.342 63.117 L 119.342 71.208 C 119.342 72.636 118.793 73.794 118.117 73.794 L 87.593 73.794 C 86.918 73.794 86.369 72.636 86.369 71.208 L 86.369 63.117 C 86.369 61.689 86.918 60.53 87.593 60.53 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 89.164 47.264 L 119.687 47.264 C 120.363 47.264 120.912 48.423 120.912 49.851 L 120.912 57.942 C 120.912 59.37 120.363 60.53 119.687 60.53 L 89.164 60.53 C 88.488 60.53 87.939 59.37 87.939 57.942 L 87.939 49.851 C 87.939 48.423 88.488 47.264 89.164 47.264 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 86.023 34 L 116.547 34 C 117.223 34 117.771 35.16 117.771 36.585 L 117.771 44.679 C 117.771 46.104 117.223 47.264 116.547 47.264 L 86.023 47.264 C 85.347 47.264 84.799 46.104 84.799 44.679 L 84.799 36.585 C 84.799 35.16 85.347 34 86.023 34 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 42.06 140.119 L 72.583 140.119 C 73.259 140.119 73.808 141.279 73.808 142.706 L 73.808 150.798 C 73.808 152.225 73.259 153.385 72.583 153.385 L 42.06 153.385 C 41.384 153.385 40.835 152.225 40.835 150.798 L 40.835 142.706 C 40.835 141.279 41.384 140.119 42.06 140.119 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 42.06 126.855 L 72.583 126.855 C 73.259 126.855 73.808 128.013 73.808 129.44 L 73.808 137.532 C 73.808 138.96 73.259 140.119 72.583 140.119 L 42.06 140.119 C 41.384 140.119 40.835 138.96 40.835 137.532 L 40.835 129.44 C 40.835 128.013 41.384 126.855 42.06 126.855 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 43.63 113.589 L 74.153 113.589 C 74.829 113.589 75.378 114.749 75.378 116.177 L 75.378 124.268 C 75.378 125.696 74.829 126.855 74.153 126.855 L 43.63 126.855 C 42.954 126.855 42.405 125.696 42.405 124.268 L 42.405 116.177 C 42.405 114.749 42.954 113.589 43.63 113.589 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 43.63 100.323 L 74.153 100.323 C 74.829 100.323 75.378 101.483 75.378 102.911 L 75.378 111.002 C 75.378 112.43 74.829 113.589 74.153 113.589 L 43.63 113.589 C 42.954 113.589 42.405 112.43 42.405 111.002 L 42.405 102.911 C 42.405 101.483 42.954 100.323 43.63 100.323 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 42.06 140.119 L 72.583 140.119 C 73.259 140.119 73.808 141.279 73.808 142.706 L 73.808 150.798 C 73.808 152.225 73.259 153.385 72.583 153.385 L 42.06 153.385 C 41.384 153.385 40.835 152.225 40.835 150.798 L 40.835 142.706 C 40.835 141.279 41.384 140.119 42.06 140.119 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 42.06 126.855 L 72.583 126.855 C 73.259 126.855 73.808 128.013 73.808 129.44 L 73.808 137.532 C 73.808 138.96 73.259 140.119 72.583 140.119 L 42.06 140.119 C 41.384 140.119 40.835 138.96 40.835 137.532 L 40.835 129.44 C 40.835 128.013 41.384 126.855 42.06 126.855 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 43.63 113.589 L 74.153 113.589 C 74.829 113.589 75.378 114.749 75.378 116.177 L 75.378 124.268 C 75.378 125.696 74.829 126.855 74.153 126.855 L 43.63 126.855 C 42.954 126.855 42.405 125.696 42.405 124.268 L 42.405 116.177 C 42.405 114.749 42.954 113.589 43.63 113.589 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 43.63 100.323 L 74.153 100.323 C 74.829 100.323 75.378 101.483 75.378 102.911 L 75.378 111.002 C 75.378 112.43 74.829 113.589 74.153 113.589 L 43.63 113.589 C 42.954 113.589 42.405 112.43 42.405 111.002 L 42.405 102.911 C 42.405 101.483 42.954 100.323 43.63 100.323 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 42.06 87.06 L 72.583 87.06 C 73.259 87.06 73.808 88.219 73.808 89.647 L 73.808 97.738 C 73.808 99.166 73.259 100.323 72.583 100.323 L 42.06 100.323 C 41.384 100.323 40.835 99.166 40.835 97.738 L 40.835 89.647 C 40.835 88.219 41.384 87.06 42.06 87.06 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+        <path d=" M 40.489 73.794 L 71.013 73.794 C 71.689 73.794 72.238 74.953 72.238 76.381 L 72.238 84.472 C 72.238 85.9 71.689 87.06 71.013 87.06 L 40.489 87.06 C 39.813 87.06 39.265 85.9 39.265 84.472 L 39.265 76.381 C 39.265 74.953 39.813 73.794 40.489 73.794 Z "
+              fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="0.727" stroke="rgb(46,46,46)"
+              stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4"/>
+    </g>
+</svg>

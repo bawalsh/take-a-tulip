@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
+     viewBox="0 0 200 200" width="200" height="200">
+    <defs>
+        <clipPath id="_clipPath_5zD7NxV9lgn9w6y3jwkTRfGwXKCtwz8k">
+            <rect width="200" height="200"/>
+        </clipPath>
+    </defs>
+    <g id="Group">
+        <path d=" M 0 100 C 0 44.808 44.808 0 100 0 C 155.192 0 200 44.808 200 100 C 200 155.192 155.192 200 100 200 C 44.808 200 0 155.192 0 100 Z "
+              fill="rgb(142,209,252)"/>
+        <path d=" M 30 154 Q 99 154.5 139 30 L 153 154" fill="rgb(235,235,235)"
+              vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(0,0,0)"
+              stroke-opacity="10000" stroke-linejoin="miter" stroke-linecap="square"
+              stroke-miterlimit="3"/>
+        <line x1="17" y1="155.002" x2="182" y2="155.002" vector-effect="non-scaling-stroke"
+              stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="10000" stroke-linejoin="miter"
+              stroke-linecap="square" stroke-miterlimit="3"/>
+    </g>
+</svg>

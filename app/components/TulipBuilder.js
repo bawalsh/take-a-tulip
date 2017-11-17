@@ -21,6 +21,8 @@ const {
     WhatsappShareButton
 } = ShareButtons;
 
+const domain = "www.takeatulip.com";
+
 const hexColorRegex = /[0-9a-fA-F]{6}/;
 
 const FacebookIcon = generateShareIcon('facebook');
@@ -42,11 +44,13 @@ class TulipBuilder extends React.Component {
                 stem: (isCustomColored ? "#"+colors.s : "#009800"),
                 pot: (isCustomColored ? "#"+colors.p : "#ffaa56")
             },
-            navigationDirection: "right"
+            navigationDirection: "right",
+            isCustomColored: isCustomColored
         };
 
         this.handleNavigation = this.handleNavigation.bind(this);
         this.handleColorChange = this.handleColorChange.bind(this);
+        this.generateShareLink = this.generateShareLink.bind(this);
     }
 
     handleNavigation(action) {
@@ -58,7 +62,8 @@ class TulipBuilder extends React.Component {
                     stem: prevState.tulipColors.stem,
                     pot: prevState.tulipColors.pot
                 },
-                navigationDirection: action === "back" ? "left" : "right"
+                navigationDirection: action === "back" ? "left" : "right",
+                isCustomColored: prevState.builderState === BuilderStates.READY && action === "next" ? false : prevState.isCustomColored
             }
         });
     }
@@ -72,7 +77,8 @@ class TulipBuilder extends React.Component {
                     stem: prevState.tulipColors.stem,
                     pot: prevState.tulipColors.pot
                 },
-                navigationDirection: prevState.navigationDirection
+                navigationDirection: prevState.navigationDirection,
+                isCustomColored: prevState.isCustomColored
             };
 
             newState.tulipColors[part] = color.hex;
@@ -81,13 +87,20 @@ class TulipBuilder extends React.Component {
         });
     }
 
+    generateShareLink() {
+        return domain+'?b='+this.state.tulipColors.bulb.substr(1)+'&s='+this.state.tulipColors.stem.substr(1)+'&p='+this.state.tulipColors.pot.substr(1);
+    }
+
     render() {
         return (
             <div className="flex-container">
-                <TulipVisualizer visualizerState={this.state.builderState} bulbColor={this.state.tulipColors.bulb} stemColor={this.state.tulipColors.stem} potColor={this.state.tulipColors.pot} />
+                <TulipVisualizer visualizerState={ this.state.isCustomColored ? BuilderStates.SHARE : this.state.builderState} bulbColor={this.state.tulipColors.bulb} stemColor={this.state.tulipColors.stem} potColor={this.state.tulipColors.pot} />
                 {this.state.builderState === BuilderStates.READY ?
                     // TODO: Find a better way to change favicon on text changes
-                    <Prompt text="Ready to make your own tulip?" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} nextText="Start creating tulip " isStationary={this.state.builderState === BuilderStates.READY} />: null
+                    (this.state.isCustomColored ?
+                            <Prompt text="Look at the beautiful tulip someone sent you!" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} nextText="Start creating tulip " isStationary={this.state.builderState === BuilderStates.READY}><h4 style={{color: "#999999"}}>Ready to make your own tulip?</h4></Prompt> :
+                        <Prompt text="Ready to make your own tulip?" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} nextText="Start creating tulip " isStationary={this.state.builderState === BuilderStates.READY} />
+                    ) : null
                 }
                 {this.state.builderState === BuilderStates.BULB_COLOR ?
                     <Prompt text="Choose a color for the bulb" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} >
@@ -106,15 +119,15 @@ class TulipBuilder extends React.Component {
                 }
                 {this.state.builderState === BuilderStates.SHARE ?
                     <Prompt text="Looking good! Now share your creation with your friends:" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} nextText="Start Over">
-                        <a href={'0.0.0.0:8081/?b='+this.state.tulipColors.bulb.substr(1)+'&s='+this.state.tulipColors.stem.substr(1)+'&p='+this.state.tulipColors.pot.substr(1)}>{'0.0.0.0:8081/?b='+this.state.tulipColors.bulb.substr(1)+'&s='+this.state.tulipColors.stem.substr(1)+'&p='+this.state.tulipColors.pot.substr(1)}</a>
+                        <textarea readOnly="readOnly" className="link-box center" value={this.generateShareLink()}/>
                         <div className="flex-container share-container">
-                            <FacebookShareButton url="www.takeatulipwebsitelink.here">
+                            <FacebookShareButton quote="See the tulip I created" url={this.generateShareLink()}>
                                 <FacebookIcon className="social-link" size={48} round={true} />
                             </FacebookShareButton>
-                            <TwitterShareButton url="www.takeatulipwebsitelink.here">
+                            <TwitterShareButton title="See the tulip I created" url={this.generateShareLink()}>
                                 <TwitterIcon className="social-link" size={48} round={true} />
                             </TwitterShareButton>
-                            <WhatsappShareButton url="www.takeatulipwebsitelink.here">
+                            <WhatsappShareButton title="See the tulip I created" url={this.generateShareLink()}>
                                 <WhatsappIcon className="social-link" size={48} round={true} />
                             </WhatsappShareButton>
                         </div>
