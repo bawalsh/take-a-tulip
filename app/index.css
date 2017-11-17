@@ -28,7 +28,7 @@ h1,h4 {
 
 .flex-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -118,7 +118,7 @@ h1,h4 {
     text-align: center;
 }
 
-.muted-link a:link, a:visited {
+.muted-link {
     color: #999999;
 }
 
