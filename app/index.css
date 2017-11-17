@@ -31,6 +31,11 @@ h1,h4 {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    padding: 0 8% 0 8%;
+}
+
+.flex-item {
+    flex: 1 0 auto;
 }
 
 .button {

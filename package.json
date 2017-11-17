@@ -4,7 +4,7 @@
   "description": "Learn more about tulip mania, and create your own tulip",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --host 0.0.0.0 --port 29876",
+    "start": "webpack-dev-server --open --host 0.0.0.0 --port 29875",
     "build": "NODE_ENV='production' webpack -p",
     "deploy": "npm run build && firebase deploy",
     "firebase-init": "firebase login && firebase init"

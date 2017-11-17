@@ -103,7 +103,8 @@ class TulipBuilder extends React.Component {
                     ) : null
                 }
                 {this.state.builderState === BuilderStates.BULB_COLOR ?
-                    <Prompt text="Choose a color for the bulb" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} >
+                    /* TODO: Remember to rename all "bulb" to "flower"*/
+                    <Prompt text="Choose a color for the flower" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} >
                         <TwitterPicker triangle="hide" color={this.state.tulipColors.bulb} onChangeComplete={(color) => this.handleColorChange("bulb", color)} />
                     </Prompt> : null
                 }
