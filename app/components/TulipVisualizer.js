@@ -3,15 +3,15 @@ import { Motion, spring } from 'react-motion';
 import PropTypes from 'prop-types';
 
 const defaultStyle = {
-    bulb: {y: 0},
+    flower: {y: 0},
     stem: {y: 0},
     pot: {y: 0},
     scale: {s: 0.85},
     sun: {x: -200, y: -200}
 };
 
-const bulbStyle = {
-    bulb: {y: spring(350, {damping: 40, precision: 0.1})},
+const flowerStyle = {
+    flower: {y: spring(350, {damping: 40, precision: 0.1})},
     stem: {y: spring(1000, {damping: 80, precision: 0.1})},
     pot: {y: spring(1000, {damping: 80, precision: 0.1})},
     scale: {s: spring(0.85, {damping: 40, precision: 0.01})},
@@ -20,7 +20,7 @@ const bulbStyle = {
 };
 
 const stemStyle = {
-    bulb: {y: spring(200, {damping: 40, precision: 0.1})},
+    flower: {y: spring(200, {damping: 40, precision: 0.1})},
     stem: {y: spring(200, {damping: 40, precision: 0.1})},
     pot: {y: spring(1000, {damping: 80, precision: 0.1})},
     scale: {s: spring(0.85, {damping: 40, precision: 0.01})},
@@ -29,7 +29,7 @@ const stemStyle = {
 };
 
 const potStyle = {
-    bulb: {y: spring(0, {damping: 40, precision: 0.1})},
+    flower: {y: spring(0, {damping: 40, precision: 0.1})},
     stem: {y: spring(0, {damping: 40, precision: 0.1})},
     pot: {y: spring(0, {damping: 40, precision: 0.1})},
     scale: {s: spring(0.85, {damping: 40, precision: 0.01})},
@@ -37,7 +37,7 @@ const potStyle = {
 };
 
 const shareStyle = {
-    bulb: {y: spring(0, {damping: 40, precision: 0.1})},
+    flower: {y: spring(0, {damping: 40, precision: 0.1})},
     stem: {y: spring(0, {damping: 40, precision: 0.1})},
     pot: {y: spring(0, {damping: 40, precision: 0.1})},
     scale: {s: spring(0.6, {damping: 40, precision: 0.01})},
@@ -57,7 +57,7 @@ class TulipVisualizer extends React.Component {
                 break;
             case 1:
                 this.state = {
-                    visualizerStyle: bulbStyle
+                    visualizerStyle: flowerStyle
                 };
                 break;
             case 2:
@@ -91,7 +91,7 @@ class TulipVisualizer extends React.Component {
             case 1:
                 this.setState(function() {
                     return {
-                        visualizerStyle: bulbStyle
+                        visualizerStyle: flowerStyle
                     }
                 });
                 break;
@@ -293,12 +293,12 @@ class TulipVisualizer extends React.Component {
                                         </filter>
                                     </defs>
                                     <Motion
-                                        defaultStyle={defaultStyle.bulb}
-                                        style={this.state.visualizerStyle.bulb}>
+                                        defaultStyle={defaultStyle.flower}
+                                        style={this.state.visualizerStyle.flower}>
                                         {interpolatingStyle =>
                                             <g transform={`translate(${interpolatingStyle.x ? interpolatingStyle.x : 0} ${interpolatingStyle.y ? interpolatingStyle.y : 0}) rotate(${interpolatingStyle.r ? interpolatingStyle.r : 0} 246 135)`} filter="url(#UZPv8ZKknQDEYr0IGD2goyuo9BRntzV9)">
-                                                <path id="bulb" d=" M 221.85 0 C 246.525 20.529 227.966 53.244 207.036 86.141 C 169.37 60.717 127.621 38.815 104.096 32.652 C 165.207 55.891 146.137 158.832 169.619 218.612 C 171.937 228.195 177.016 236.2 183.939 242.736 C 201.197 262.839 216.091 271.187 238.447 267.76 C 265.818 273.27 283.02 263.734 303.59 239.14 C 350.688 182.833 312.928 40.8 388.979 11.88 C 362.184 18.9 313.716 44.616 271.269 73.896 C 256.76 42.423 238.506 11.213 221.851 0.004 L 221.85 0 L 221.85 0 Z "
-                                                      fillRule="evenodd" fill={this.props.bulbColor}/>
+                                                <path id="flower" d=" M 221.85 0 C 246.525 20.529 227.966 53.244 207.036 86.141 C 169.37 60.717 127.621 38.815 104.096 32.652 C 165.207 55.891 146.137 158.832 169.619 218.612 C 171.937 228.195 177.016 236.2 183.939 242.736 C 201.197 262.839 216.091 271.187 238.447 267.76 C 265.818 273.27 283.02 263.734 303.59 239.14 C 350.688 182.833 312.928 40.8 388.979 11.88 C 362.184 18.9 313.716 44.616 271.269 73.896 C 256.76 42.423 238.506 11.213 221.851 0.004 L 221.85 0 L 221.85 0 Z "
+                                                      fillRule="evenodd" fill={this.props.flowerColor}/>
                                             </g>}
                                     </Motion>
                                 </g>
@@ -313,7 +313,7 @@ class TulipVisualizer extends React.Component {
 
 TulipVisualizer.propTypes = {
     visualizerState: PropTypes.number,
-    bulbColor: PropTypes.string,
+    flowerColor: PropTypes.string,
     stemColor: PropTypes.string,
     potColor: PropTypes.string
 };

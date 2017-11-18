@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
 
 const BuilderStates = {
     READY: 0,
-    BULB_COLOR : 1,
+    FLOWER_COLOR : 1,
     STEM_COLOR : 2,
     POT_COLOR : 3,
     SHARE : 4
@@ -35,12 +35,12 @@ class TulipBuilder extends React.Component {
         super(props);
 
         let colors = QueryString.parse(this.props.location.search);
-        let isCustomColored = (hexColorRegex.test(colors.b)) && (hexColorRegex.test(colors.s)) && (hexColorRegex.test(colors.p));
+        let isCustomColored = (hexColorRegex.test(colors.f)) && (hexColorRegex.test(colors.s)) && (hexColorRegex.test(colors.p));
 
         this.state = {
             builderState: BuilderStates.READY,
             tulipColors: {
-                bulb: (isCustomColored ? "#"+colors.b : "#ff5555"),
+                flower: (isCustomColored ? "#"+colors.f : "#ff5555"),
                 stem: (isCustomColored ? "#"+colors.s : "#009800"),
                 pot: (isCustomColored ? "#"+colors.p : "#ffaa56")
             },
@@ -56,9 +56,9 @@ class TulipBuilder extends React.Component {
     handleNavigation(action) {
         this.setState(function (prevState) {
             return {
-                builderState: action === "back" ? prevState.builderState - 1 : (prevState.builderState === BuilderStates.SHARE ? BuilderStates.BULB_COLOR : prevState.builderState + 1),
+                builderState: action === "back" ? prevState.builderState - 1 : (prevState.builderState === BuilderStates.SHARE ? BuilderStates.FLOWER_COLOR : prevState.builderState + 1),
                 tulipColors: {
-                    bulb: prevState.tulipColors.bulb,
+                    flower: prevState.tulipColors.flower,
                     stem: prevState.tulipColors.stem,
                     pot: prevState.tulipColors.pot
                 },
@@ -73,7 +73,7 @@ class TulipBuilder extends React.Component {
             let newState =  {
                 builderState: prevState.builderState,
                 tulipColors: {
-                    bulb: prevState.tulipColors.bulb,
+                    flower: prevState.tulipColors.flower,
                     stem: prevState.tulipColors.stem,
                     pot: prevState.tulipColors.pot
                 },
@@ -88,24 +88,22 @@ class TulipBuilder extends React.Component {
     }
 
     generateShareLink() {
-        return domain+'?b='+this.state.tulipColors.bulb.substr(1)+'&s='+this.state.tulipColors.stem.substr(1)+'&p='+this.state.tulipColors.pot.substr(1);
+        return domain+'?f='+this.state.tulipColors.flower.substr(1)+'&s='+this.state.tulipColors.stem.substr(1)+'&p='+this.state.tulipColors.pot.substr(1);
     }
 
     render() {
         return (
             <div className="flex-container">
-                <TulipVisualizer visualizerState={ this.state.isCustomColored ? BuilderStates.SHARE : this.state.builderState} bulbColor={this.state.tulipColors.bulb} stemColor={this.state.tulipColors.stem} potColor={this.state.tulipColors.pot} />
+                <TulipVisualizer visualizerState={ this.state.isCustomColored ? BuilderStates.SHARE : this.state.builderState} flowerColor={this.state.tulipColors.flower} stemColor={this.state.tulipColors.stem} potColor={this.state.tulipColors.pot} />
                 {this.state.builderState === BuilderStates.READY ?
-                    // TODO: Find a better way to change favicon on text changes
                     (this.state.isCustomColored ?
                             <Prompt text="Look at the beautiful tulip someone sent you!" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} nextText="Start creating tulip " isStationary={this.state.builderState === BuilderStates.READY}><h4 style={{color: "#999999"}}>Ready to make your own tulip?</h4></Prompt> :
                         <Prompt text="Ready to make your own tulip?" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} nextText="Start creating tulip " isStationary={this.state.builderState === BuilderStates.READY} />
                     ) : null
                 }
-                {this.state.builderState === BuilderStates.BULB_COLOR ?
-                    /* TODO: Remember to rename all "bulb" to "flower"*/
+                {this.state.builderState === BuilderStates.FLOWER_COLOR ?
                     <Prompt text="Choose a color for the flower" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} hasBack={false} >
-                        <TwitterPicker triangle="hide" color={this.state.tulipColors.bulb} onChangeComplete={(color) => this.handleColorChange("bulb", color)} />
+                        <TwitterPicker triangle="hide" color={this.state.tulipColors.flower} onChangeComplete={(color) => this.handleColorChange("flower", color)} />
                     </Prompt> : null
                 }
                 {this.state.builderState === BuilderStates.STEM_COLOR ?
@@ -119,7 +117,7 @@ class TulipBuilder extends React.Component {
                     </Prompt> : null
                 }
                 {this.state.builderState === BuilderStates.SHARE ?
-                    <Prompt text="Looking good! Now share your creation with your friends:" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} nextText="Start Over">
+                    <Prompt text="Looking good! Now share your creation with your friends:" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} nextText="Start Over" nextIcon="fa-undo">
                         <textarea readOnly="readOnly" className="link-box center" value={this.generateShareLink()}/>
                         <div className="flex-container share-container">
                             <FacebookShareButton quote="Learn more about tulip mania, have a look at the beautiful tulip I created and create your own." url={this.generateShareLink()}>

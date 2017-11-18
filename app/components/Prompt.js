@@ -24,12 +24,12 @@ const transitionStyles = {
     },
     leave: {
         left: {
-            opacity: spring(0, {stiffness:158, damping: 25, precision: 0.1}),
-            left: spring(-200, {stiffness:158, damping: 25, precision: 0.1})
+            opacity: spring(0, {damping: 20, precision: 0.1}),
+            left: spring(-200, {damping: 20, precision: 0.1})
         },
         right: {
-            opacity: spring(0, {stiffness:158, damping: 25, precision: 0.1}),
-            left: spring(200, {stiffness:158, damping: 25, precision: 0.1})
+            opacity: spring(0, {damping: 20, precision: 0.1}),
+            left: spring(200, {damping: 20, precision: 0.1})
         }
     }
 };
@@ -74,8 +74,8 @@ class Prompt extends React.Component {
                             {this.props.children}
                             <br/>
                             <div className="flex-container">
-                                {this.props.hasBack ? <button className="button center muted" onClick={this.handleInternalNavigationBack}><i className="fa fa-arrow-left" /> Back</button> : null}
-                                <button className="button center" onClick={this.handleInternalNavigationNext}>{this.props.nextText} {this.props.nextText === Prompt.defaultProps.nextText || this.props.nextText === "Start creating tulip " ? <i className="fa fa-arrow-right" /> : <i className="fa fa-undo" /> }</button>
+                                {this.props.hasBack ? <button className="button center muted" onClick={this.handleInternalNavigationBack}><i className="fa fa-arrow-left muted" /> Back</button> : null}
+                                <button className="button center" onClick={this.handleInternalNavigationNext}>{this.props.nextText} <i className={`fa ${this.props.nextIcon}`} /></button>
                             </div>
                         </div>}
             </Motion>
@@ -86,7 +86,8 @@ class Prompt extends React.Component {
 Prompt.defaultProps = {
     hasBack: true,
     nextText: "Next",
-    isStationary: false
+    isStationary: false,
+    nextIcon: "fa-arrow-right"
 };
 
 Prompt.propTypes = {
@@ -95,7 +96,8 @@ Prompt.propTypes = {
     from: PropTypes.string.isRequired,
     hasBack: PropTypes.bool,
     nextText: PropTypes.string,
-    isStationary: PropTypes.bool
+    isStationary: PropTypes.bool,
+    nextIcon: PropTypes.string
 };
 
 export default Prompt;

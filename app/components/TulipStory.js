@@ -7,8 +7,7 @@ import compareSVG from '../images/compare.svg';
 function TulipStory() {
         return (
             <div>
-                {/* TODO: Change logo class */}
-                <h1 className="heading">About Tulip Mania</h1>
+                <h1 className="annie heading">About Tulip Mania</h1>
                 <div className="flex-container no-wrap">
                     <img src={graphSVG} width="50" height="50" style={{margin: "20px 20px 20px 0px", minWidth: "50px", minHeight: "50px"}} />
                     <p style={{maxWidth: "480px"}}>Tulip Mania was a period during which prices for some tulips reached extraordinarily high levels and then dramatically collapsed.</p>
