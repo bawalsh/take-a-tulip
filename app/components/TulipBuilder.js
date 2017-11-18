@@ -85,7 +85,7 @@ class TulipBuilder extends React.Component {
   }
 
   generateShareLink() {
-    return `${Domain}?f=${this.state.tulipColors.flower.substr(1)}&s=${this.state.tulipColors.stem.substr(1)}&p=${this.state.tulipColors.pot.substr(1)}`;
+    return `${Domain}/?f=${this.state.tulipColors.flower.substr(1)}&s=${this.state.tulipColors.stem.substr(1)}&p=${this.state.tulipColors.pot.substr(1)}`;
   }
 
   render() {
