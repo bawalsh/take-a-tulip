@@ -130,3 +130,11 @@ h1,h4 {
 .muted-link:hover {
     color: #333333;
 }
+
+.github-logo {
+    opacity:0.5;
+}
+
+.github-logo:hover {
+    opacity:1;
+}

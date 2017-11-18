@@ -122,13 +122,13 @@ class TulipBuilder extends React.Component {
                     <Prompt text="Looking good! Now share your creation with your friends:" handleNavigation={this.handleNavigation} from={this.state.navigationDirection} nextText="Start Over">
                         <textarea readOnly="readOnly" className="link-box center" value={this.generateShareLink()}/>
                         <div className="flex-container share-container">
-                            <FacebookShareButton quote="See the tulip I created" url={this.generateShareLink()}>
+                            <FacebookShareButton quote="Learn more about tulip mania, have a look at the beautiful tulip I created and create your own." url={this.generateShareLink()}>
                                 <FacebookIcon className="social-link" size={48} round={true} />
                             </FacebookShareButton>
-                            <TwitterShareButton title="See the tulip I created" url={this.generateShareLink()}>
+                            <TwitterShareButton title="Learn more about tulip mania, have a look at the beautiful tulip I created and create your own at " url={this.generateShareLink()}>
                                 <TwitterIcon className="social-link" size={48} round={true} />
                             </TwitterShareButton>
-                            <WhatsappShareButton title="See the tulip I created" url={this.generateShareLink()}>
+                            <WhatsappShareButton title="Learn more about tulip mania, have a look at the beautiful tulip I created and create your own at" url={this.generateShareLink()}>
                                 <WhatsappIcon className="social-link" size={48} round={true} />
                             </WhatsappShareButton>
                         </div>
